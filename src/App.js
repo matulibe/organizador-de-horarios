@@ -14,9 +14,32 @@ import './App.css';
  */
 function App() {
 
-  const [actividades, setActividades] = useState([]);
+  const [actividades, setActividades] = useState([
+    {
+      list: "lunes"
+    },
+    {
+      list: "lunes"
+    },
+    {
+      list: "lunes"
+    },
+    {
+      list: "lunes"
+    },
+    {
+      list: "lunes"
+    },
+    {
+      list: "lunes"
+    },
 
-  const getList = (data) =>{
+    {
+      list: "lunes"
+    },
+  ]);
+
+  const getList = (list) =>{
     return actividades.filter(item => item.list === list)
   }
 
@@ -28,9 +51,80 @@ function App() {
 
   return (
     <>
-      <div className="App">
-        <h1 id="title">Organizador de horarios</h1>
+      <div className="title">Organizador de horarios</div>
+      <div className='planilla'>
+        <div className='dia'>
+          <h2>Lunes</h2>
+          <div className='celda'>
+            {getList("lunes").map(item => (
+              <div className='actividades'>
+                <strong className='titulo'>Titulo</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className='dia'>
+          <h2>Martes</h2>
+          <div className='celda'>
+            {getList("martes").map(item => (
+              <div className='actividades'>
+                <strong className='titulo'>Titulo</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className='dia'>
+          <h2>Miercoles</h2>
+          <div className='celda'>
+            {getList("miercoles").map(item => (
+              <div className='actividades'>
+                <strong className='titulo'>Titulo</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className='dia'>
+          <h2>Jueves</h2>
+          <div className='celda'>
+            {getList("jueves").map(item => (
+              <div className='actividades'>
+                <strong className='titulo'>Titulo</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className='dia'>
+          <h2>Viernes</h2>
+          <div className='celda'>
+            {getList("viernes").map(item => (
+              <div className='actividades'>
+                <strong className='titulo'>Titulo</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className='dia'>
+          <h2>Sabado</h2>
+          <div className='celda'>
+            {getList("sabado").map(item => (
+              <div className='actividades'>
+                <strong className='titulo'>Titulo</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className='dia'>
+          <h2>Domingo</h2>
+          <div className='celda'>
+            {getList("domingo").map(item => (
+              <div className='actividades'>
+                <strong className='titulo'>Titulo</strong>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
+
     </>
   );
 }
