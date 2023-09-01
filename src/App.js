@@ -10,8 +10,19 @@ import './App.css';
  */
 function App() {
   return (
-    <div className="App">
-      <h1 id="title">Organizador de horarios</h1>
+    <div>
+      <div className="App">
+        <h1 id="title">Organizador de horarios</h1>
+      </div>
+      
+      {/* */ }
+      {/* <div>
+        {widgets.map((widget, index) => (
+          <div>
+            {widget}
+          </div>
+        ))}
+      </div> */}
     </div>
   );
 }
