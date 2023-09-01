@@ -16,19 +16,22 @@ function App() {
 
   const [actividades, setActividades] = useState([]);
 
+  const getList = (data) =>{
+    return actividades.filter(item => item.list === list)
+  }
+
+  const startDrag = (e, item) => {
+    e.dataTransfer.setData('itemID', item.id);
+  }
+
   function handleDrag(){}
 
   return (
-    <div>
+    <>
       <div className="App">
         <h1 id="title">Organizador de horarios</h1>
       </div>
-
-      <DndContext collisionDetection={closestCenter} onDragEnd={handleDrag}>
-          
-      </DndContext>
-
-    </div>
+    </>
   );
 }
 
